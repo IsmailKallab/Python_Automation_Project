@@ -1,7 +1,7 @@
 import boto3
 from pprint import pprint
 
-session = boto3.session.Session(profile_name="Python-AWS")
+session = boto3.session.Session(profile_name="Python-AWS")  ##refered to your user on aws 
 cli_obj = session.client(service_name="ec2", region_name="us-east-1")
 ec2_service_re = session.resource(service_name='ec2', region_name='us-east-1')
 elb_client = boto3.client(service_name='elbv2', region_name='us-east-1')
